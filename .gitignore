@@ -1,0 +1,33 @@
+# Binaries
+kube-event-logger
+
+# Logs
+*.log
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Go-related
+bin/
+pkg/
+*.exe
+*.out
+*.test
+*.o
+*.a
+*.so
+*.lo
+
+# Dependency directory (in case using vendor)
+vendor/
+
+# Cache and build files
+go.sum
+go.work
+go.work.sum
+
+# Environment files
+.env

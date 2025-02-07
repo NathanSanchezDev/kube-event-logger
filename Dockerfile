@@ -30,18 +30,11 @@ WORKDIR /root/
 COPY --from=builder /app/kube-event-logger .
 COPY --from=builder /app/migrations ./migrations
 
-# Copy any required configurations
-COPY --from=builder /app/configs ./configs
-
 # Ensure the binary is executable
 RUN chmod +x /root/kube-event-logger
 
 # Expose port 8080 for the API
 EXPOSE 8080
-
-# Set environment variables (these would be overridden in K8s)
-ENV DATABASE_URL="postgres://postgres:postgres@postgres:5432/eventdb?sslmode=disable"
-ENV PORT="8080"
 
 # Run the application
 CMD ["/root/kube-event-logger"]
