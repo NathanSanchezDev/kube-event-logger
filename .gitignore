@@ -12,7 +12,6 @@ kube-event-logger
 
 # Go-related
 bin/
-pkg/
 *.exe
 *.out
 *.test
@@ -21,7 +20,7 @@ pkg/
 *.so
 *.lo
 
-# Dependency directory (in case using vendor)
+# Dependency directory
 vendor/
 
 # Cache and build files
@@ -31,3 +30,13 @@ go.work.sum
 
 # Environment files
 .env
+
+# Database files
+*.sqlite
+*.sql-journal
+*.sql
+*.dump
+
+# Kubernetes secrets
+secrets.yaml
+kubeconfig
