@@ -40,3 +40,4 @@ go.work.sum
 # Kubernetes secrets
 secrets.yaml
 kubeconfig
+kube-event-logger
